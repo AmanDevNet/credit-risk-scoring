@@ -115,10 +115,12 @@ Open your browser and navigate to:
 ## 📸 Screenshots
 
 ### 1. Loan Application Form
-*(Add screenshot of index.html here)*
+<img width="1084" height="837" alt="Screenshot 2026-02-14 212937" src="https://github.com/user-attachments/assets/e9bb790c-eda7-4d34-bcdb-136f15613b08" />
+
 
 ### 2. Risk Assessment Result
-*(Add screenshot of result.html here)*
+<img width="1095" height="810" alt="Screenshot 2026-02-14 213008" src="https://github.com/user-attachments/assets/6ccb905e-2b34-4d06-a11e-4901d4b8b5f6" />
+
 
 ---
 
