@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg text-center">
+                <div class="card-header bg-{{ risk_color }} text-white">
+                    <h2>Assessment Complete</h2>
+                </div>
+                <div class="card-body">
+                    <h3 class="card-title mt-3">Risk Level: <span class="text-{{ risk_color }} fw-bold">{{ risk_category }}</span></h3>
+                    
+                    <div class="my-4">
+                        <h5>Probability of Default</h5>
+                        <div class="progress" style="height: 30px;">
+                            <div class="progress-bar bg-{{ risk_color }}" role="progressbar" 
+                                 style="width: {{ probability }}%;" 
+                                 aria-valuenow="{{ probability }}" aria-valuemin="0" aria-valuemax="100">
+                                {{ probability }}%
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="lead">{{ explanation }}</p>
+                    
+                    <hr>
+                    
+                    <h5 class="text-start">Applicant Summary</h5>
+                    <ul class="list-group list-group-flush text-start">
+                        <li class="list-group-item"><strong>Credit Score:</strong> {{ data['Credit Score'] }}</li>
+                        <li class="list-group-item"><strong>DTI Ratio:</strong> {{ data['Debt-to-Income Ratio'] }}</li>
+                        <li class="list-group-item"><strong>Annual Income:</strong> ${{ data['Annual Income'] }}</li>
+                        <li class="list-group-item"><strong>Loan Amount:</strong> ${{ data['Loan Amount'] }}</li>
+                    </ul>
+
+                    <a href="/" class="btn btn-outline-secondary mt-4">Assess Another Applicant</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
