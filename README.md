@@ -73,7 +73,7 @@ Follow these steps to set up the project on your local machine.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/yourusername/credit-risk-scoring.git
+git clone https://github.com/AmanDevNet/credit-risk-scoring.git
 cd credit-risk-scoring
 ```
 
